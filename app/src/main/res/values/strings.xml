@@ -9,4 +9,5 @@
     <string name="address">Address</string>
     <string name="no_contacts">No contacts</string>
     <string name="no_contacts_sub_title">Use the \'+\' Icon to add a new contact</string>
+    <string name="error_too_short">Input too short!</string>
 </resources>

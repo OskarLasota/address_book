@@ -3,14 +3,8 @@
     <style name="Theme.Address_book" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/grey</item>
-        <item name="colorPrimaryVariant">@color/dark_grey</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="colorPrimaryDark">@color/dark_grey</item>
+        <item name="colorAccent">@color/black</item>
         <!-- Customize your theme here. -->
     </style>
 
