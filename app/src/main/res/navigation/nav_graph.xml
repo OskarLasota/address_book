@@ -6,7 +6,7 @@
     <fragment
         android:id="@+id/addressBookFragment"
         android:name="com.example.address_book.functionalities.addresslist.AddressBookFragment"
-        android:label="AddressBookFragment" >
+        android:label="@string/app_name" >
         <action
             android:id="@+id/action_addressBookFragment_to_newAddressFragment"
             app:destination="@id/newAddressFragment" />
@@ -17,9 +17,10 @@
     <fragment
         android:id="@+id/addressFragment"
         android:name="com.example.address_book.functionalities.address.AddressFragment"
-        android:label="AddressFragment" />
+        android:label="@string/address" />
+
     <fragment
         android:id="@+id/newAddressFragment"
         android:name="com.example.address_book.functionalities.newaddress.NewAddressFragment"
-        android:label="NewAddressFragment" />
+        android:label="@string/add_new_contact" />
 </navigation>
