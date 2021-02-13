@@ -1,7 +1,7 @@
 package com.example.address_book.di
 
-import com.example.address_book.ui.AddressBookFragment
-import com.example.address_book.ui.AddressFragment
+import com.example.address_book.functionalities.addresslist.AddressBookFragment
+import com.example.address_book.functionalities.address.AddressFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
