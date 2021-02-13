@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">address_book</string>
+    <string name="app_name">Address Book</string>
+    <string name="add_new_contact">Add New Contact</string>
+    <string name="save">Save</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="address">Address</string>
+    <string name="no_contacts">No contacts</string>
+    <string name="no_contacts_sub_title">Use the \'+\' Icon to add a new contact</string>
 </resources>
