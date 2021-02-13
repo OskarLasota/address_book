@@ -1,25 +1,11 @@
 package com.example.address_book
 
-import android.app.Activity
 import android.app.Application
-import com.example.address_book.di.AppInjector
-import dagger.android.AndroidInjector
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasActivityInjector
-import javax.inject.Inject
+import dagger.hilt.android.HiltAndroidApp
 
-class App : Application(), HasActivityInjector {
+@HiltAndroidApp
+class App : Application() {
 
-    @Inject
-    lateinit var injector : DispatchingAndroidInjector<Activity>
-
-    override fun activityInjector(): AndroidInjector<Activity> = injector
-
-
-    override fun onCreate() {
-        super.onCreate()
-        AppInjector.init(this)
-    }
 
 
 }

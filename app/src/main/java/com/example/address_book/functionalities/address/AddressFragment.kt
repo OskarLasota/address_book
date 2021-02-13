@@ -4,12 +4,11 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.example.address_book.R
-import com.example.address_book.di.Injectable
-import javax.inject.Inject
+import dagger.hilt.android.AndroidEntryPoint
 
-class AddressFragment : Fragment(R.layout.fragment_address), Injectable {
+@AndroidEntryPoint
+class AddressFragment : Fragment(R.layout.fragment_address) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

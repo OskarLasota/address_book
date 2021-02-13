@@ -5,9 +5,10 @@ import android.view.Menu
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.address_book.R
-import com.example.address_book.di.Injectable
+import dagger.hilt.android.AndroidEntryPoint
 
-class NewAddressFragment : Fragment(R.layout.fragment_new_address), Injectable {
+@AndroidEntryPoint
+class NewAddressFragment : Fragment(R.layout.fragment_new_address) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
