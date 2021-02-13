@@ -11,12 +11,7 @@ import javax.inject.Inject
 
 class AddressBookFragment : Fragment(R.layout.fragment_address_book), Injectable {
 
-    @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
 
-    private val addressViewModel: AddressListViewModel by viewModels {
-        viewModelFactory
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
