@@ -19,7 +19,6 @@ class NewAddressFragment : Fragment(R.layout.fragment_new_address) {
         super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)
         setListeners()
-        viewModel.getContacts()
     }
 
     private fun setListeners(){
