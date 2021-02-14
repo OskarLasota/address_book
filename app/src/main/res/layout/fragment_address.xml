@@ -12,9 +12,9 @@
             android:id="@+id/tv_fname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textSize="16sp"
+            android:layout_margin="20dp"
             android:textColor="@color/black"
+            android:textSize="16sp"
             tools:text="Joshua" />
 
         <View
@@ -26,9 +26,9 @@
             android:id="@+id/tv_lname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textSize="16sp"
+            android:layout_margin="20dp"
             android:textColor="@color/black"
+            android:textSize="16sp"
             tools:text="Smith" />
 
         <View
@@ -40,9 +40,9 @@
             android:id="@+id/tv_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textSize="16sp"
+            android:layout_margin="20dp"
             android:textColor="@color/black"
+            android:textSize="16sp"
             tools:text="joshua.smith@gmail.com" />
 
         <View
@@ -54,9 +54,9 @@
             android:id="@+id/tv_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textSize="16sp"
+            android:layout_margin="20dp"
             android:textColor="@color/black"
+            android:textSize="16sp"
             tools:text="07117112123" />
 
         <View
@@ -68,9 +68,9 @@
             android:id="@+id/tv_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textSize="16sp"
+            android:layout_margin="20dp"
             android:textColor="@color/black"
+            android:textSize="16sp"
             tools:text="Studio 3A The OldKnows Factory \nSt Ann's Hill Road \n Nottingham \n NG3 4GP" />
 
         <View

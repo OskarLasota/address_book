@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         app:layout_constraintTop_toTopOf="parent"
-        android:hint="@string/first_name"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -23,6 +22,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             android:includeFontPadding="false"
+            android:hint="@string/first_name"
+            android:textSize="14dp"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -38,6 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
+            android:textSize="14dp"
             android:hint="@string/last_name"
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -55,6 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
+            android:textSize="14dp"
             android:hint="@string/email_address"
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -72,6 +75,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
+            android:textSize="14dp"
             android:hint="@string/phone_number"
             />
 
@@ -90,6 +94,7 @@
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
             android:hint="@string/address"
+            android:textSize="14dp"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,6 +107,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="20dp"
         android:textAllCaps="false"
+        android:textSize="14dp"
         android:text="@string/save"
         android:backgroundTint="@color/button_colour"
         />

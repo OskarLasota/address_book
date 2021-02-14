@@ -18,7 +18,16 @@
     <fragment
         android:id="@+id/addressFragment"
         android:name="com.example.address_book.functionalities.address.AddressFragment"
-        android:label="@string/address" />
+        android:label="{name}" >
+        <argument
+            android:name="name"
+            app:argType="string"
+            />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            />
+    </fragment>
 
     <fragment
         android:id="@+id/newAddressFragment"

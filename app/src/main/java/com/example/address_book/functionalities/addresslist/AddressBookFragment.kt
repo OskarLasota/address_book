@@ -48,7 +48,7 @@ class AddressBookFragment : Fragment(R.layout.fragment_address_book) {
         binding.addresslistRecycler.setOnItemClickListener { _, _, position, _ ->
             findNavController().navigate(
                 R.id.action_addressBookFragment_to_addressFragment,
-                bundleOf("id" to addressList[position].id)
+                bundleOf("id" to addressList[position].id, "name" to addressList[position].fname + " " + addressList[position].lname)
             )
         }
     }
