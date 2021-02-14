@@ -1,12 +1,17 @@
 package com.example.address_book.functionalities.newaddress
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
+import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.address_book.R
 import com.example.address_book.data.Contact
+import com.example.address_book.databinding.FragmentAddressBinding
+import com.example.address_book.databinding.FragmentNewAddressBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_new_address.*
 
@@ -14,6 +19,17 @@ import kotlinx.android.synthetic.main.fragment_new_address.*
 class NewAddressFragment : Fragment(R.layout.fragment_new_address) {
 
     private val viewModel by viewModels<NewAddressViewModel>()
+    private lateinit var binding: FragmentNewAddressBinding
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_new_address, container, false)
+        return binding.root
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -22,7 +38,7 @@ class NewAddressFragment : Fragment(R.layout.fragment_new_address) {
     }
 
     private fun setListeners(){
-        btn_save.setOnClickListener {
+        binding.btnSave.setOnClickListener {
             //call viewmodel
             if(inputIsValid()) {
                 viewModel.addContact(Contact(0, et_fname.text.toString(), et_lname.text.toString(), et_email.text.toString(), et_phone.text.toString(), et_address.text.toString()))
@@ -31,24 +47,24 @@ class NewAddressFragment : Fragment(R.layout.fragment_new_address) {
     }
 
     private fun inputIsValid() : Boolean{
-        if(et_fname.text.toString().length < NAME_LENGTH){
-            et_fname.error = getString(R.string.error_too_short)
+        if(binding.etFname.text.toString().length < NAME_LENGTH){
+            binding.etFname.error = getString(R.string.error_too_short)
             return false
         }
-        if(et_lname.text.toString().length < NAME_LENGTH){
-            et_lname.error = getString(R.string.error_too_short)
+        if(binding.etLname.text.toString().length < NAME_LENGTH){
+            binding.etLname.error = getString(R.string.error_too_short)
             return false
         }
-        if(et_email.text.toString().length < EMAIL_LENGTH){
-            et_address.error = getString(R.string.error_too_short)
+        if(binding.etEmail.text.toString().length < EMAIL_LENGTH){
+            binding.etEmail.error = getString(R.string.error_too_short)
             return false
         }
-        if(et_phone.text.toString().length < PHONE_LENGTH){
-            et_phone.error = getString(R.string.error_too_short)
+        if(binding.etPhone.text.toString().length < PHONE_LENGTH){
+            binding.etPhone.error = getString(R.string.error_too_short)
             return false
         }
-        if(et_address.text.toString().length < ADDRESS_LENGTH){
-            et_address.error = getString(R.string.error_too_short)
+        if(binding.etAddress.text.toString().length < ADDRESS_LENGTH){
+            binding.etAddress.error = getString(R.string.error_too_short)
             return false
         }
         return true
