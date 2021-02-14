@@ -4,11 +4,17 @@ plugins {
     id 'kotlin-kapt'
     id 'kotlin-android-extensions'
     id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
+
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
 
     defaultConfig {
         applicationId "com.example.address_book"

@@ -12,7 +12,8 @@
             app:destination="@id/newAddressFragment" />
         <action
             android:id="@+id/action_addressBookFragment_to_addressFragment"
-            app:destination="@id/addressFragment" />
+            app:destination="@id/addressFragment" >
+        </action>
     </fragment>
     <fragment
         android:id="@+id/addressFragment"
