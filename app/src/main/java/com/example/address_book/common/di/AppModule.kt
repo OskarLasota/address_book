@@ -2,8 +2,8 @@ package com.example.address_book.common.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.address_book.common.AppScheduler
-import com.example.address_book.common.SchedulerWrapper
+import com.example.address_book.common.scheduler.AppScheduler
+import com.example.address_book.common.scheduler.SchedulerWrapper
 import com.example.address_book.data.db.AppDatabase
 import com.example.address_book.data.db.ContactDao
 import dagger.Module

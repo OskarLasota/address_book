@@ -1,4 +1,4 @@
-package com.example.address_book.common
+package com.example.address_book.common.scheduler
 
 import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers

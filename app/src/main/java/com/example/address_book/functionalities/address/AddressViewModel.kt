@@ -4,7 +4,7 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.address_book.common.AppScheduler
+import com.example.address_book.common.scheduler.AppScheduler
 import com.example.address_book.data.Contact
 import com.example.address_book.data.repository.AddressRepository
 import io.reactivex.disposables.CompositeDisposable
