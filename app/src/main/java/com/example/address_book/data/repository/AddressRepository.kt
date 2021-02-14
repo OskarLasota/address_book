@@ -8,5 +8,6 @@ interface AddressRepository {
 
     fun getContacts() : Single<List<Contact>>
     fun insertContact(contact: Contact) : Completable
+    fun getContact(id : Int) : Single<Contact>
 
 }

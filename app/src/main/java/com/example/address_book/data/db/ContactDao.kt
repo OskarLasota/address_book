@@ -18,5 +18,7 @@ interface ContactDao {
     @Query("SELECT * FROM contact_table ORDER BY id ASC")
     fun getContacts() : Single<List<Contact>>
 
+    @Query("SELECT * FROM contact_table WHERE id = :id")
+    fun getContact(id : Int) : Single<Contact>
 
 }

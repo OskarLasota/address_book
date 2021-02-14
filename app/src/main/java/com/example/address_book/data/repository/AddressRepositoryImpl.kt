@@ -19,4 +19,10 @@ class AddressRepositoryImpl @Inject constructor(private val dao : ContactDao) : 
             return@defer dao.insert(contact)
         }
     }
+
+    override fun getContact(id: Int): Single<Contact> {
+        return Single.defer{
+            return@defer dao.getContact(id)
+        }
+    }
 }
