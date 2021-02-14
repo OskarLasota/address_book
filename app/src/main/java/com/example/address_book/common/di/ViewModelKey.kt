@@ -1,4 +1,4 @@
-package com.example.address_book.di
+package com.example.address_book.common.di
 import androidx.lifecycle.ViewModel
 import dagger.MapKey
 import kotlin.reflect.KClass

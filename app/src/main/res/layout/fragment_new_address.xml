@@ -100,6 +100,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="20dp"
+        android:textAllCaps="false"
         android:text="@string/save"
         android:backgroundTint="@color/button_colour"
         />
