@@ -54,5 +54,7 @@ class AddressFragment : Fragment(R.layout.fragment_address) {
 
     override fun onPrepareOptionsMenu(menu: Menu) {
         menu.findItem(R.id.add_address).isVisible = false
+        menu.findItem(R.id.search_icon).isVisible = false
+
     }
 }

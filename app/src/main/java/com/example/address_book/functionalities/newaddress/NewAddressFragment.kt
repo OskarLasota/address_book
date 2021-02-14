@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.address_book.R
 import com.example.address_book.data.Contact
 import com.example.address_book.databinding.FragmentAddressBinding
@@ -35,6 +37,17 @@ class NewAddressFragment : Fragment(R.layout.fragment_new_address) {
         super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)
         setListeners()
+        setObservers()
+    }
+
+    private fun setObservers(){
+        viewModel.inserted.observe(viewLifecycleOwner, {
+            if(it){
+                findNavController().navigate(R.id.addressBookFragment)
+            }else{
+                Toast.makeText(requireContext(), getString(R.string.error), Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     private fun setListeners(){
@@ -72,6 +85,7 @@ class NewAddressFragment : Fragment(R.layout.fragment_new_address) {
 
     override fun onPrepareOptionsMenu(menu: Menu) {
         menu.findItem(R.id.add_address).isVisible = false
+        menu.findItem(R.id.search_icon).isVisible = false
     }
 
     companion object {

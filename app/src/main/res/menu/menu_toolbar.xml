@@ -8,5 +8,10 @@
         android:icon="@drawable/ic_add"
         app:showAsAction="ifRoom"
         android:title="add address" />
-
+    <item
+        android:id="@+id/search_icon"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:title="Search" />
 </menu>

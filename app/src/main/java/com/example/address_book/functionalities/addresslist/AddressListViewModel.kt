@@ -18,6 +18,9 @@ class AddressListViewModel @ViewModelInject constructor(
     private val _contacts = MutableLiveData<List<Contact>>()
     val contacts : LiveData<List<Contact>> = _contacts
 
+    private val _filtered = MutableLiveData<List<Contact>>()
+    val filtered : LiveData<List<Contact>> = _filtered
+
     private val _error = MutableLiveData<String>()
     private val error : LiveData<String> = _error
 
@@ -32,6 +35,16 @@ class AddressListViewModel @ViewModelInject constructor(
                     _error.postValue(it.toString())
                 })
         )
+    }
+
+    fun filterContacts(query : String){
+        var result = arrayListOf<Contact>()
+        _contacts.value?.map {
+            if(it.fname.toLowerCase().contains(query.toLowerCase()) || it.lname.toLowerCase().contains(query.toLowerCase())){
+                result.add(it)
+            }
+        }
+        _filtered.postValue(result)
     }
 
 
